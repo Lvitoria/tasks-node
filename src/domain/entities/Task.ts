@@ -12,7 +12,7 @@ export class Task {
   id!: string;
 
   @IsNotEmpty()
-  title: string;
+  title: string = '';
 
   description?: string;
 

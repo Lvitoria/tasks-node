@@ -9,10 +9,10 @@ export class User {
   username: string = '';
 
   @IsEmail({}, { message: 'Invalid email' })
-  email: string;
+  email: string = '';
 
   @IsNotEmpty({ message: 'Password should not be empty' })
-  password: string;
+  password: string = '';
 
   constructor(props: Omit<User, 'id'>, id?: string) {
     this.id = id ?? uuidv4();
